@@ -30,6 +30,9 @@ class Portfolio extends Component {
             icon1={["fab", "node"]}
             icon2={["fab", "react"]}
             icon3={"database"}
+            colorIcon1={"#6cc24a"}
+            colorIcon2={"#00d8ff"}
+            colorIcon3={"#589636"}
             github={"#"}
             live={"#"}
           />

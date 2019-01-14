@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .skill-container {
   background: white;
   text-align: center;
@@ -6,6 +8,7 @@
   width: 23rem;
   padding: 3rem 0;
   margin-bottom: 3rem;
+  color: $card-text-color;
 
   .skill-description {
     margin: 0 1rem;

@@ -18,7 +18,7 @@ i18n.use(LanguageDetector).init({
     },
     es: {
       translations: {
-        "Hello, I'm Mark": "Hola, soy Mark Spanish",
+        "Hello, I'm Mark": "Hola, soy Mark",
         EN: "ES",
         "Lorem ipsum dolor sit amet, an duis aeque impedit nam. Possit honestatis dissentiunt sea et, alterum invidunt periculis ea quo.":
           "Spanish ipsum dolor sit amet, an duis aeque impedit nam. Possit honestatis dissentiunt sea et, alterum invidunt periculis ea quo.",

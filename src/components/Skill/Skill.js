@@ -14,7 +14,7 @@ class Skill extends Component {
       <div className="skill-container">
         <div className="skill-content">
           <div className="icon">
-            <FontAwesomeIcon size="4x" color="black" icon={"code"} />
+            <FontAwesomeIcon size="4x" color="#374850" icon={"code"} />
           </div>
           <div className="title">
             <h4>{this.props.title}</h4>

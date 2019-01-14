@@ -40,6 +40,7 @@ class Technologies extends Component {
             skill2={"expressJS"}
             skill3={"mongoDB"}
             skill4={"mongoose"}
+            skill5={"MVC"}
           />
         </div>
         <div

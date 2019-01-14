@@ -37,7 +37,6 @@ class App extends Component {
 
     return (
       <div className="App ">
-        <Particle />
         <NavBar changeLanguage={changeLanguage} />
         <Header />
         <About />
