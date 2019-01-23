@@ -16,7 +16,7 @@ library.add(faIgloo);
 
 class App extends Component {
   state = {
-    language: "en"
+    language: "English"
   };
   componentDidMount() {
     new WOW().init();
@@ -26,28 +26,22 @@ class App extends Component {
     const { t, i18n } = this.props;
 
     const changeLanguage = lng => {
-      if (this.state.language === "en") {
-        this.setState({ language: "es" });
+      if (this.state.language === "English") {
+        this.setState({ language: "Spanish" });
         i18n.changeLanguage("es");
       } else {
-        this.setState({ language: "en" });
+        this.setState({ language: "English" });
         i18n.changeLanguage("en");
       }
     };
 
     return (
       <div className="App ">
-        <NavBar changeLanguage={changeLanguage} />
+        <NavBar changeLanguage={changeLanguage} lng={this.state.language} />
         <Header />
         <About />
         <Portfolio />
         <Technologies />
-        <header className="App-header">
-          <h1 className="wow bounceInUp">{t("Hello, I'm Mark")}</h1>
-          <button onClick={() => changeLanguage("es")}>ES</button>
-          <div>Asd AAAAA</div>
-          <FontAwesomeIcon size="2x" color="#6DB65B" icon="igloo" />
-        </header>
       </div>
     );
   }

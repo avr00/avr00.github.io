@@ -3,6 +3,11 @@ import { translate } from "react-i18next";
 import "../NavBar/NavBar.scss";
 import { Link } from "react-scroll";
 import HamburgerMenu from "react-hamburger-menu";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+
+library.add(fab, faLanguage);
 
 class NavBar extends Component {
   state = {
@@ -40,7 +45,7 @@ class NavBar extends Component {
             spy={true}
             smooth={true}
             duration={500}>
-            About
+            {t("about")}
           </Link>
           <Link
             activeClass="active"
@@ -48,7 +53,7 @@ class NavBar extends Component {
             spy={true}
             smooth={true}
             duration={500}>
-            Portfolio
+            {t("portfolio")}
           </Link>
           <Link
             activeClass="active"
@@ -56,10 +61,12 @@ class NavBar extends Component {
             spy={true}
             smooth={true}
             duration={500}>
-            Technologies
+            {t("technologies")}
           </Link>
-          <a href="#">Resume</a>
-          <a onClick={() => this.props.changeLanguage()}>{t(`EN`)}</a>
+          <a href="#"> {t("resume")}</a>
+          <a className="lng" onClick={() => this.props.changeLanguage()}>
+            {t("LANGUAGE")}
+          </a>
         </div>
       </nav>
     );

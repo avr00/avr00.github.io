@@ -14,27 +14,21 @@ class Header extends Component {
     const { t } = this.props;
     return (
       <header id="header">
-        <h1 className="wow bounceIn">{t("Hello, I'm Mark")}</h1>
-        <h2 className="wow bounceIn">Full Stack Dev | Marketer</h2>
+        <h1 className="wow bounceIn">{t("Hey, I'm Aníbal!")}</h1>
+        <h2 className="wow bounceIn">Full Stack Web Dev</h2>
+        <h3 className="wow bounceIn">{t("looking")}</h3>
         <div className="icons wow bounceIn">
-          <a href="https://github.com" target="_blank">
+          <a href="https://github.com/avr00" target="_blank">
             <FontAwesomeIcon size="2x" color="white" icon={["fab", "github"]} />
           </a>
-          <a href="https://twitter.com/" target="_blank">
-            <FontAwesomeIcon
-              size="2x"
-              color="white"
-              icon={["fab", "twitter"]}
-            />
-          </a>
-          <a href="https://www.linkedin.com" target="_blank">
+          <a href="https://www.linkedin.com/in/avr352634788/" target="_blank">
             <FontAwesomeIcon
               size="2x"
               color="white"
               icon={["fab", "linkedin"]}
             />
           </a>
-          <a href="mailto:whatever@gmail.com">
+          <a href="mailto:avrivadeneira1@gmail.com">
             <FontAwesomeIcon size="2x" color="white" icon={"envelope"} />
           </a>
         </div>

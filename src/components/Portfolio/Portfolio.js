@@ -3,6 +3,10 @@ import { translate } from "react-i18next";
 import "./Portfolio.scss";
 import Card from "../Card/Card";
 import { Element } from "react-scroll";
+import headnews from "../../images/headnews.png";
+import huddleLanding from "../../images/huddle-landing.png";
+import notesAppMern from "../../images/notes-app-mern.png";
+import passwordGenerator from "../../images/password-generator.png";
 
 class Portfolio extends Component {
   render() {
@@ -12,73 +16,32 @@ class Portfolio extends Component {
         <h1>Portfolio</h1>
         <div className="cards-container">
           <Card
-            title={"Notes"}
-            description={t(
-              "Take notes with this app fully backed by mongoDB and Node"
-            )}
-            icon1={["fab", "node"]}
-            icon2={["fab", "react"]}
-            icon3={"database"}
-            github={"#"}
-            live={"#"}
+            title={"Headnews"}
+            description={t("headnews")}
+            img={headnews}
+            github={"https://github.com/avr00/headnews"}
+            live={"https://jolly-hypatia-445f35.netlify.com/us/general"}
           />
           <Card
             title={"Notes"}
-            description={
-              "Take notes with this app fully backed by mongoDB and Node"
-            }
-            icon1={["fab", "node"]}
-            icon2={["fab", "react"]}
-            icon3={"database"}
-            colorIcon1={"#6cc24a"}
-            colorIcon2={"#00d8ff"}
-            colorIcon3={"#589636"}
-            github={"#"}
-            live={"#"}
+            description={t("notes")}
+            img={notesAppMern}
+            github={"https://github.com/avr00/Notes_Material"}
+            live={"https://my-notes-mern.herokuapp.com/"}
           />
           <Card
-            title={"Notes"}
-            description={
-              "Take notes with this app fully backed by mongoDB and Node"
-            }
-            icon1={["fab", "node"]}
-            icon2={["fab", "react"]}
-            icon3={"database"}
-            github={"#"}
-            live={"#"}
+            title={"Huddle"}
+            description={t("huddle")}
+            img={huddleLanding}
+            github={"https://github.com/avr00/Notes_Material"}
+            live={"https://sad-gates-eefc3a.netlify.com/"}
           />
           <Card
-            title={"Notes"}
-            description={
-              "Take notes with this app fully backed by mongoDB and Node"
-            }
-            icon1={["fab", "node"]}
-            icon2={["fab", "react"]}
-            icon3={"database"}
-            github={"#"}
-            live={"#"}
-          />
-          <Card
-            title={"Notes"}
-            description={
-              "Take notes with this app fully backed by mongoDB and Node"
-            }
-            icon1={["fab", "node"]}
-            icon2={["fab", "react"]}
-            icon3={"database"}
-            github={"#"}
-            live={"#"}
-          />
-          <Card
-            title={"Notes"}
-            description={
-              "Take notes with this app fully backed by mongoDB and Node"
-            }
-            icon1={["fab", "node"]}
-            icon2={["fab", "react"]}
-            icon3={"database"}
-            github={"#"}
-            live={"#"}
+            title={"Password Generator"}
+            description={t("reactPassword")}
+            img={passwordGenerator}
+            github={"https://github.com/avr00/passwordgenerator-react"}
+            live={"https://festive-nightingale-d10ab1.netlify.com/"}
           />
         </div>
       </Element>

@@ -19,9 +19,7 @@ class Technologies extends Component {
         <div className="skills-container">
           <Skill
             title={"Front-end Technologies"}
-            description={t(
-              "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing."
-            )}
+            description={t("frontend")}
             skill1={"React"}
             skill2={"React Hooks"}
             skill3={"Redux"}
@@ -33,9 +31,7 @@ class Technologies extends Component {
           />
           <Skill
             title={"Back-end Technologies"}
-            description={
-              "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing."
-            }
+            description={t("backend")}
             skill1={"NodeJS"}
             skill2={"expressJS"}
             skill3={"mongoDB"}

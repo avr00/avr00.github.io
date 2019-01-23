@@ -16,29 +16,19 @@ class Card extends Component {
           <div className="card-title">
             <h3>{this.props.title}</h3>
           </div>
+          <div className="card-image">
+            <img src={this.props.img} />
+          </div>
           <div className="card-description">
             <p>{this.props.description}</p>
           </div>
-          <div className="card-technologies">
-            <FontAwesomeIcon
-              size="2x"
-              color={this.props.colorIcon1}
-              icon={this.props.icon1}
-            />
-            <FontAwesomeIcon
-              size="2x"
-              color={this.props.colorIcon2}
-              icon={this.props.icon2}
-            />
-            <FontAwesomeIcon
-              size="2x"
-              color={this.props.colorIcon3}
-              icon={this.props.icon3}
-            />
-          </div>
           <div className="card-links">
-            <a href={this.props.github}>Github</a>
-            <a href={this.props.live}>Live</a>
+            <a href={this.props.github} target="_blank">
+              Github
+            </a>
+            <a href={this.props.live} target="_blank">
+              Live
+            </a>
           </div>
         </div>
       </div>

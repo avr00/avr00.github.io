@@ -10,6 +10,7 @@ library.add(fab, faCode);
 
 class Skill extends Component {
   render() {
+    const { t } = this.props;
     return (
       <div className="skill-container">
         <div className="skill-content">
@@ -23,7 +24,7 @@ class Skill extends Component {
             <p>{this.props.description}</p>
           </div>
           <div className="skills-title">
-            <h5>What I use</h5>
+            <h5>{t("use")}</h5>
           </div>
           <div className="skills">
             <span>{this.props.skill1}</span>
