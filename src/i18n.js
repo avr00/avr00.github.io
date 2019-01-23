@@ -22,7 +22,7 @@ i18n.use(LanguageDetector).init({
           "Browse for news from different countries and languages, app made with newsAPI, React, Redux, Redux Thunk & Sass",
 
         notes:
-          "Save your notes in the cloud safely, I created a RESTful API that connects to a React App, I made this app using the MERN Stack",
+          "Save your notes in the cloud safely, I created a RESTful API that connects to a React App, I made this app using the MERN Stack and the MVC Pattern",
 
         huddle:
           "Landing page for Huddle, I took the mockup and converted it using Sass and semantic HTML5",
@@ -47,12 +47,12 @@ i18n.use(LanguageDetector).init({
           "¡Siempre buscando nuevos proyectos emocionantes en los que pueda contribuir con mis habilidades!",
         about: "Sobre mí",
         who:
-          "Desarrollador Web Full Stack. Soy persona autodidacta, aprediz rapido y trabajadora, me encanta el desarrollo web y aprender nuevas tecnologías. Mi enfoque es traer una experiencia de usuario increíble en todos mis proyectos. Tengo una titutlo en negocios donde me especialicé en marketing digital, por eso le presto mucha atención a los detalles que mejoran el engagement de usuario.",
+          "Desarrollador Web Full Stack. Persona autodidacta y trabajadora. Me encanta el desarrollo web y aprender nuevas tecnologías. Mi enfoque esta en brindar una experiencia de usuario increíble en todos mis proyectos. Soy graduado de Ing. en Administración con mención en marketing, donde me enfoque en lo digital por lo cual le presto mucha atención a todos los detalles que mejoran el engagement y la experiencia de usuario.",
         headnews:
           "Agregador de noticias, busca noticias de diferentes países, idiomas y fuentes, esta aplicación fue realizada con React, Redux, Redux Thunk, Sass y NewsAPI",
 
         notes:
-          "Guarda tus notas en la nube de forma segura, creé una RESTful API que se conecta a una aplicación de React, para realizar esta aplicacion utilize el MERN Stack",
+          "Guarda tus notas en la nube de forma segura, creé una RESTful API que se conecta a una aplicación de React, para realizar esta aplicación utilicé el MERN Stack",
         huddle:
           "Landing page para Huddle, tomé la maqueta y la convertí en codigo usando Sass y HTML5 semántico",
         reactPassword:
