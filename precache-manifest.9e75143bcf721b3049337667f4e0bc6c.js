@@ -1,27 +1,27 @@
 self.__precacheManifest = [
   {
-    "revision": "cbb3ec60ed528c42bf5491fec6cf396d",
-    "url": "/static/media/Resume_ES.cbb3ec60.pdf"
+    "revision": "a805c2c41d3374800af43819e6de336b",
+    "url": "/static/media/Resume_ES.a805c2c4.pdf"
   },
   {
-    "revision": "289971a7d98f93a816fa",
-    "url": "/static/css/main.3a940e4b.chunk.css"
+    "revision": "55e3ad34d8528e391183",
+    "url": "/static/css/main.83dbe78b.chunk.css"
   },
   {
-    "revision": "361dc100ca59e8af4d46",
-    "url": "/static/js/1.361dc100.chunk.js"
+    "revision": "601aca86541400f2674f",
+    "url": "/static/js/1.601aca86.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
     "url": "/static/js/runtime~main.229c360f.js"
   },
   {
-    "revision": "492d0750aa6f886b1632fd469a39cdca",
-    "url": "/static/media/Resume_EN.492d0750.pdf"
+    "revision": "31438b5df2cb3aee50b0c5d81ff7f179",
+    "url": "/static/media/Resume_EN.31438b5d.pdf"
   },
   {
-    "revision": "289971a7d98f93a816fa",
-    "url": "/static/js/main.289971a7.chunk.js"
+    "revision": "55e3ad34d8528e391183",
+    "url": "/static/js/main.55e3ad34.chunk.js"
   },
   {
     "revision": "139339fc0b4c5b959be753af4f1f8be2",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/static/media/password-generator.af29ed12.png"
   },
   {
-    "revision": "6476c9893493763a7cfbcce3a7d8c326",
+    "revision": "f420f0ff528bb75a357f4bd8d8d47f02",
     "url": "/index.html"
   }
 ];
