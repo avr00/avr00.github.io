@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/Resume_ES.0feaa26c.pdf"
   },
   {
-    "revision": "90cdf5f61226e93371a9",
+    "revision": "44e99b4ffc8bee917c98",
     "url": "/static/css/main.03f41405.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = [
     "url": "/static/media/Resume_EN.37e8238e.pdf"
   },
   {
-    "revision": "90cdf5f61226e93371a9",
-    "url": "/static/js/main.90cdf5f6.chunk.js"
+    "revision": "44e99b4ffc8bee917c98",
+    "url": "/static/js/main.44e99b4f.chunk.js"
   },
   {
     "revision": "139339fc0b4c5b959be753af4f1f8be2",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/static/media/password-generator.af29ed12.png"
   },
   {
-    "revision": "3470a8187fb1dc34372413e5de7cb877",
+    "revision": "d02526446dd0d2abeb6673c0c6cd6a53",
     "url": "/index.html"
   }
 ];
