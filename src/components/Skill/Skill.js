@@ -35,6 +35,9 @@ class Skill extends Component {
             <span>{this.props.skill6}</span>
             <span>{this.props.skill7}</span>
             <span>{this.props.skill8}</span>
+            <span>{this.props.skill9}</span>
+            <span>{this.props.skill10}</span>
+            <span>{this.props.skill11}</span>
           </div>
         </div>
       </div>

@@ -23,9 +23,7 @@ class Card extends Component {
             <p>{this.props.description}</p>
           </div>
           <div className="card-links">
-            <a href={this.props.github} target="_blank">
-              Github
-            </a>
+            {this.props.github}
             <a href={this.props.live} target="_blank">
               Live
             </a>

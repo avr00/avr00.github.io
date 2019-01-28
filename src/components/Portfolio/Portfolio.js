@@ -16,31 +16,73 @@ class Portfolio extends Component {
         <h1>Portfolio</h1>
         <div className="cards-container">
           <Card
+            title={"Word Inspector"}
+            description={t("wordinspector")}
+            img={
+              "https://avr00.github.io/my_portfolio/resources/img/Word%20Inspector.png"
+            }
+            live={
+              "https://play.google.com/store/apps/details?id=com.westworldgames.wordinspector"
+            }
+          />
+          <Card
+            title={"Plane: Avoid Missiles"}
+            description={t("planeapp")}
+            img={
+              "https://avr00.github.io/my_portfolio/resources/img/planeavoid.png"
+            }
+            live={
+              "https://play.google.com/store/apps/details?id=com.WestWorldGames.pilotmissiles"
+            }
+          />
+          <Card
             title={"Headnews"}
             description={t("headnews")}
             img={headnews}
-            github={"https://github.com/avr00/headnews"}
+            github={
+              <a href={"https://github.com/avr00/headnews"} target="_blank">
+                Github
+              </a>
+            }
             live={"https://jolly-hypatia-445f35.netlify.com/us/general"}
           />
           <Card
             title={"Notes"}
             description={t("notes")}
             img={notesAppMern}
-            github={"https://github.com/avr00/Notes_Material"}
+            github={
+              <a
+                href={"https://github.com/avr00/Notes_Material"}
+                target="_blank">
+                Github
+              </a>
+            }
             live={"https://my-notes-mern.herokuapp.com/"}
           />
           <Card
             title={"Huddle"}
             description={t("huddle")}
             img={huddleLanding}
-            github={"https://github.com/avr00/Notes_Material"}
+            github={
+              <a
+                href={"https://github.com/avr00/Notes_Material"}
+                target="_blank">
+                Github
+              </a>
+            }
             live={"https://sad-gates-eefc3a.netlify.com/"}
           />
           <Card
             title={"Password Generator"}
             description={t("reactPassword")}
             img={passwordGenerator}
-            github={"https://github.com/avr00/passwordgenerator-react"}
+            github={
+              <a
+                href={"https://github.com/avr00/passwordgenerator-react"}
+                target="_blank">
+                Github
+              </a>
+            }
             live={"https://festive-nightingale-d10ab1.netlify.com/"}
           />
         </div>

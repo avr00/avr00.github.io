@@ -9,7 +9,7 @@ import Header from "../Header/Header";
 import About from "../About/About";
 import Portfolio from "../Portfolio/Portfolio";
 import Technologies from "../Technologies/Technologies";
-import Particle from "../Particles/Particle";
+//import Particle from "../Particles/Particle";
 //import { Scrollbars } from "react-custom-scrollbars";
 
 library.add(faIgloo);

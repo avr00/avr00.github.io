@@ -21,13 +21,6 @@ class Header extends Component {
           <a href="https://github.com/avr00" target="_blank">
             <FontAwesomeIcon size="2x" color="white" icon={["fab", "github"]} />
           </a>
-          <a href="https://www.linkedin.com/in/avr352634788/" target="_blank">
-            <FontAwesomeIcon
-              size="2x"
-              color="white"
-              icon={["fab", "linkedin"]}
-            />
-          </a>
           <a href="mailto:avrivadeneira1@gmail.com">
             <FontAwesomeIcon size="2x" color="white" icon={"envelope"} />
           </a>

@@ -25,18 +25,21 @@ class Technologies extends Component {
             skill3={"Redux"}
             skill4={"Responsive CSS3"}
             skill5={"SaSS"}
-            skill6={"jQuery"}
+            skill6={"Styled Components"}
             skill7={"Bootstrap"}
             skill8={"Material UI"}
+            skill9={"jQuery"}
           />
           <Skill
             title={"Back-end Technologies"}
             description={t("backend")}
             skill1={"NodeJS"}
             skill2={"expressJS"}
-            skill3={"mongoDB"}
+            skill3={"PHP"}
             skill4={"mongoose"}
             skill5={"MVC"}
+            skill6={"mongoDB"}
+            skill7={"RESTful APIs"}
           />
         </div>
         <div

@@ -32,7 +32,11 @@ i18n.use(LanguageDetector).init({
         backend:
           "I can create RESTful APIs and I like to write clean and understandable code using the MVC Pattern.",
 
-        use: "What I use"
+        use: "What I use",
+        wordinspector:
+          "Become a true inspector and find the hidden words in this game. Made with Unity3D, C# and Photoshop",
+        planeapp:
+          "Incredibly fun game where you have to avoid the different missiles coming your way in order to stay alive. Made with Unity3D, C# and Photoshop"
       }
     },
     es: {
@@ -63,7 +67,11 @@ i18n.use(LanguageDetector).init({
         backend:
           "Puedo crear RESTFful APIs y me gusta escribir código limpio y comprensible usando el patrón MVC.",
 
-        use: "Lo que uso"
+        use: "Lo que uso",
+        wordinspector:
+          "Conviértete en un verdadero inspector y encuentra las palabras ocultas. Hecho con Unity3D, C# and Photoshop",
+        planeapp:
+          "Un juego increíblemente divertido en el que tienes que evitar que los diferentes misiles se te acerquen para mantenerte vivo. Hecho con Unity3D, C# and Photoshop"
       }
     }
   },

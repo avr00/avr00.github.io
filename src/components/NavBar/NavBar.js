@@ -4,10 +4,13 @@ import "../NavBar/NavBar.scss";
 import { Link } from "react-scroll";
 import HamburgerMenu from "react-hamburger-menu";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faLanguage } from "@fortawesome/free-solid-svg-icons";
+import { faLanguage, faFileDownload } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import resumeEN from "../../resources/Resume_EN.pdf";
+import resumeES from "../../resources/Resume_ES.pdf";
 
-library.add(fab, faLanguage);
+library.add(fab, faLanguage, faFileDownload);
 
 class NavBar extends Component {
   state = {
@@ -63,7 +66,13 @@ class NavBar extends Component {
             duration={500}>
             {t("technologies")}
           </Link>
-          <a href="#"> {t("resume")}</a>
+          <a
+            className="download-cv"
+            href={this.props.lng === "en" ? resumeEN : resumeES}
+            target="_blank">
+            {t("resume")}
+            <FontAwesomeIcon className="file-download" icon="file-download" />
+          </a>
           <a className="lng" onClick={() => this.props.changeLanguage()}>
             {t("LANGUAGE")}
           </a>
