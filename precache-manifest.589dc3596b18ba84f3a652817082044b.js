@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "a805c2c41d3374800af43819e6de336b",
-    "url": "/static/media/Resume_ES.a805c2c4.pdf"
+    "revision": "0feaa26c832f11d7cbef470612959079",
+    "url": "/static/media/Resume_ES.0feaa26c.pdf"
   },
   {
-    "revision": "89550c75f77bfc7e5bab",
+    "revision": "90cdf5f61226e93371a9",
     "url": "/static/css/main.03f41405.chunk.css"
   },
   {
@@ -16,12 +16,12 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.229c360f.js"
   },
   {
-    "revision": "31438b5df2cb3aee50b0c5d81ff7f179",
-    "url": "/static/media/Resume_EN.31438b5d.pdf"
+    "revision": "37e8238ed9ce98b8aaefacd56b062d24",
+    "url": "/static/media/Resume_EN.37e8238e.pdf"
   },
   {
-    "revision": "89550c75f77bfc7e5bab",
-    "url": "/static/js/main.89550c75.chunk.js"
+    "revision": "90cdf5f61226e93371a9",
+    "url": "/static/js/main.90cdf5f6.chunk.js"
   },
   {
     "revision": "139339fc0b4c5b959be753af4f1f8be2",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/static/media/password-generator.af29ed12.png"
   },
   {
-    "revision": "02aae19ba4c7aecb11e853cad59708d2",
+    "revision": "3470a8187fb1dc34372413e5de7cb877",
     "url": "/index.html"
   }
 ];
