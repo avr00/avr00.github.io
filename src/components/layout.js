@@ -12,21 +12,18 @@ import styled, { ThemeProvider } from "styled-components"
 import "../i18n"
 
 import Header from "./header"
-import "./layout.css"
-import { H1 } from "./styles"
+import {
+  H1,
+  SubText,
+  Button,
+  lightTheme,
+  darkTheme,
+  GlobalStyle,
+} from "./styles"
 
-const lightTheme = {
-  primary: "red",
-  bg: "white",
-}
-
-const darkTheme = {
-  primary: "blue",
-  bg: "#292929",
-}
-
-const Text = styled.p`
-  color: ${props => props.theme.text};
+const Wrapper = styled.div`
+  background: ${props => props.theme.bg};
+  margin: 0 auto;
 `
 
 const Layout = ({ children }) => {
@@ -43,25 +40,19 @@ const Layout = ({ children }) => {
 
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <button onClick={() => setTheme(!isDark)}>change theme</button>
-          <H1>Hey I’m Anibal, Software Developer.</H1>
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
+      <Wrapper>
+        <GlobalStyle />
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          setTheme={setTheme}
+          isDark={isDark}
+        />
+        <main>{children}</main>
+        <footer>
+          © {new Date().getFullYear()}, Built with
+          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        </footer>
+      </Wrapper>
     </ThemeProvider>
   )
 }
