@@ -15,6 +15,8 @@ import useLocalStorage from "../hooks/useLocalStorage"
 
 import Header from "./header"
 import { lightTheme, darkTheme, GlobalStyle } from "./styles"
+import MobileHeader from "./mobileHeader"
+import useMedia from "../hooks/useMedia"
 
 const Wrapper = styled.div`
   background: ${props => props.theme.bg};
@@ -35,6 +37,7 @@ const Wrapper = styled.div`
 
 const Layout = ({ children }) => {
   const [isDark, setTheme] = useLocalStorage("isDark", "false")
+  const match = useMedia("(max-width: 900px) ")
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -50,11 +53,16 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <Wrapper>
         <GlobalStyle />
-        <Header
-          siteTitle={data.site.siteMetadata.title}
-          setTheme={setTheme}
-          isDark={isDark}
-        />
+        {match ? (
+          <MobileHeader isDark={isDark} setTheme={setTheme} />
+        ) : (
+          <Header
+            siteTitle={data.site.siteMetadata.title}
+            setTheme={setTheme}
+            isDark={isDark}
+          />
+        )}
+
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with{" "}

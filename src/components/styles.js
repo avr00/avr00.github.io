@@ -27,6 +27,11 @@ export const H1 = styled.h1`
   font-size: 64px;
   line-height: 75px;
   color: ${props => props.theme.primary};
+
+  @media only screen and (max-width: 800px) {
+    font-size: 48px;
+    line-height: 56px;
+  }
 `
 
 export const SubText = styled.p`
@@ -37,6 +42,10 @@ export const SubText = styled.p`
   line-height: 28px;
 
   color: ${props => props.theme.secondary};
+  @media only screen and (max-width: 800px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 `
 
 export const AboutMeText = styled.p`
@@ -48,6 +57,9 @@ export const AboutMeText = styled.p`
   width: 450px;
 
   color: ${props => props.theme.secondary};
+  @media only screen and (max-width: 500px) {
+    width: auto;
+  }
 `
 
 export const Button = styled.a`
@@ -191,6 +203,12 @@ export const TechCard = styled.div`
       font-style: normal;
       font-weight: normal;
       font-size: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .title {
+      font-size: 20px;
     }
   }
 `

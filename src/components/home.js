@@ -7,14 +7,26 @@ import { useTranslation } from "react-i18next"
 
 const HomeSection = styled.section`
   max-width: 1280px;
+  height: 100vh;
   margin: 50px auto;
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-content: center;
 
   .image-container {
     max-width: 500px;
     margin: auto 0;
+  }
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    height: 600px;
+
+    .image-container {
+      display: none;
+    }
   }
 `
 

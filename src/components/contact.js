@@ -6,6 +6,7 @@ const ContactWrapper = styled.section`
   border-top: 2px solid rgba(0, 0, 0, 0.15);
   border-bottom: 2px solid rgba(0, 0, 0, 0.15);
   margin-top: -20px;
+  margin-bottom: 30px;
 
   .container {
     height: 300px;
@@ -33,6 +34,19 @@ const ContactWrapper = styled.section`
         font-size: 15px;
         line-height: 42px;
         color: ${props => props.theme.primary};
+      }
+    }
+  }
+
+  @media only screen and (max-width: 740px) {
+    margin-top: 30px;
+    .container {
+      grid-template-columns: 1fr;
+
+      .github {
+        padding: 20px 0;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+        border-right: none;
       }
     }
   }

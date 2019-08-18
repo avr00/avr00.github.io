@@ -18,6 +18,21 @@ const TechnologyWrapper = styled.section`
   h1 {
     margin: 100px 0;
   }
+
+  @media only screen and (max-width: 1200px) {
+    padding: 0 20px;
+    .card-container {
+      grid-template-columns: 300px 300px;
+    }
+  }
+
+  @media only screen and (max-width: 740px) {
+    padding: 0 20px;
+
+    .card-container {
+      grid-template-columns: 100%;
+    }
+  }
 `
 
 const Technology = () => {

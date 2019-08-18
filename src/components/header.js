@@ -58,6 +58,7 @@ const HeaderWrapper = styled.header`
 
 const Header = ({ siteTitle, setTheme, isDark }) => {
   const [scrollYPosition, setScrollYPosition] = useState(0)
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", handleScroll, 16)

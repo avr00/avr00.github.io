@@ -21,6 +21,15 @@ const AboutWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
   }
+
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    margin: 60px auto 60px auto;
+    .image-container {
+      display: none;
+    }
+  }
 `
 
 const About = () => {
