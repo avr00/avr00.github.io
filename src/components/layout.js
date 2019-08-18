@@ -5,29 +5,37 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
 import "../i18n"
 
+import useLocalStorage from "../hooks/useLocalStorage"
+
 import Header from "./header"
-import {
-  H1,
-  SubText,
-  Button,
-  lightTheme,
-  darkTheme,
-  GlobalStyle,
-} from "./styles"
+import { lightTheme, darkTheme, GlobalStyle } from "./styles"
 
 const Wrapper = styled.div`
   background: ${props => props.theme.bg};
   margin: 0 auto;
+
+  footer {
+    font-family: Roboto;
+    color: ${props => props.theme.primary};
+    display: flex;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      color: ${props => props.theme.primary};
+      margin-left: 5px;
+    }
+  }
 `
 
 const Layout = ({ children }) => {
-  const [isDark, setTheme] = useState(false)
+  const [isDark, setTheme] = useLocalStorage("isDark", "false")
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -49,8 +57,8 @@ const Layout = ({ children }) => {
         />
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          © {new Date().getFullYear()}, Built with{" "}
+          <a href="https://www.gatsbyjs.org"> Gatsby</a>
         </footer>
       </Wrapper>
     </ThemeProvider>

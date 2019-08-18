@@ -3,8 +3,7 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-import { H1, AboutMeText, Button } from "./styles"
-import Image from "./image"
+import { H1, AboutMeText } from "./styles"
 
 const AboutWrapper = styled.section`
   max-width: 1280px;

@@ -7,7 +7,8 @@ import { useTranslation } from "react-i18next"
 
 const HomeSection = styled.section`
   max-width: 1280px;
-  margin: 100px auto;
+  margin: 50px auto;
+  padding: 120px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
 
@@ -18,7 +19,7 @@ const HomeSection = styled.section`
 `
 
 const Home = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   return (
     <HomeSection id="home">
       <div className="home-info">
