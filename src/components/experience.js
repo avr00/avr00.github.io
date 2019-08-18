@@ -6,7 +6,8 @@ import { H1 } from "./styles"
 
 const ExprienceWrapper = styled.section`
   max-width: 1280px;
-  margin: 300px auto;
+  margin: 0px auto 300px auto;
+  padding-top: 20px;
   .card-container {
     display: grid;
     grid-template-columns: 300px 300px 300px;

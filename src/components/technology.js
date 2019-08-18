@@ -4,7 +4,8 @@ import { H1, TechCard } from "./styles"
 
 const TechnologyWrapper = styled.section`
   max-width: 1280px;
-  margin: 300px auto 0px auto;
+  margin: 0px auto 0px auto;
+  padding-top: 20px;
   .card-container {
     display: grid;
     grid-template-columns: 450px 450px;
@@ -21,7 +22,7 @@ const TechnologyWrapper = styled.section`
 
 const Technology = () => {
   return (
-    <TechnologyWrapper>
+    <TechnologyWrapper id="technology">
       <H1>Technologies</H1>
       <div className="card-container">
         <TechCard>

@@ -3,6 +3,7 @@ import styled, { createGlobalStyle } from "styled-components"
 export const GlobalStyle = createGlobalStyle`
     body {
       margin: 0;
+      background: ${props => props.theme.bg};
     }
 `
 
@@ -49,7 +50,9 @@ export const AboutMeText = styled.p`
   color: ${props => props.theme.secondary};
 `
 
-export const Button = styled.div`
+export const Button = styled.a`
+  text-decoration: none;
+
   transition: all 0.3s ease-out;
 
   display: flex;
@@ -165,7 +168,7 @@ export const TechCard = styled.div`
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 42px;
     .line {
       margin-top: 15px;
@@ -187,7 +190,7 @@ export const TechCard = styled.div`
       font-family: Roboto;
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
+      font-size: 15px;
     }
   }
 `

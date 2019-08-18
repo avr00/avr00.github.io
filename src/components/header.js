@@ -94,7 +94,10 @@ const Header = ({ siteTitle, setTheme, isDark }) => {
           <li>
             <a href="#experience">Experience</a>{" "}
           </li>
-          <li>Technologies</li>
+          <li>
+            {" "}
+            <a href="#technology">Technologies</a>{" "}
+          </li>
           <li>Resume</li>
           <li onClick={() => setTheme(!isDark)}>
             <img src={isDark ? moonIcon : sunIcon} alt="language flag" />

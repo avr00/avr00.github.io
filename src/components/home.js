@@ -27,7 +27,7 @@ const Home = () => {
         <SubText>
           I love building products that users will love to interact with.
         </SubText>
-        <Button>
+        <Button href="#contact">
           Get In Touch
           <img
             src={arrowRightIcon}

@@ -7,7 +7,8 @@ import { H1, AboutMeText } from "./styles"
 
 const AboutWrapper = styled.section`
   max-width: 1280px;
-  margin: 300px auto;
+  margin: 150px auto 300px auto;
+  padding-top: 150px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   .image-container {
