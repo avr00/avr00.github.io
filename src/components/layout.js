@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled, { ThemeProvider } from "styled-components"
@@ -37,7 +37,10 @@ const Wrapper = styled.div`
 
 const Layout = ({ children }) => {
   const [isDark, setTheme] = useLocalStorage("isDark", "false")
-  const match = useMedia("(max-width: 900px) ")
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
+
+  const match =
+    typeof window !== `undefined` ? useMedia("(max-width: 900px) ") : null
 
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -52,9 +55,14 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <Wrapper>
-        <GlobalStyle />
+        <GlobalStyle isMobileMenuOpen={isMobileMenuOpen} />
         {match ? (
-          <MobileHeader isDark={isDark} setTheme={setTheme} />
+          <MobileHeader
+            isDark={isDark}
+            setTheme={setTheme}
+            open={isMobileMenuOpen}
+            setOpen={setMobileMenuOpen}
+          />
         ) : (
           <Header
             siteTitle={data.site.siteMetadata.title}

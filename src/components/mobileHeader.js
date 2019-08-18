@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { slide as Menu } from "react-burger-menu"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
@@ -19,6 +19,8 @@ const MobileHeaderWrapper = styled.div`
   top: 0;
   width: 100%;
   z-index: 10; */
+
+  ${props => props.open && "position: sticky; top: 0; left: 0;"}
 
   /* Position and sizing of clickable cross button */
   .bm-cross-button {
@@ -78,6 +80,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     list-style: none;
     margin: 0;
     .icon-menu-item {
+      cursor: pointer;
       color: ${props => props.theme.secondary};
       font-family: Roboto;
       font-style: normal;
@@ -112,23 +115,55 @@ Note: Beware of modifying this element as it can break the animations - you shou
 `
 
 const HamburgerButton = styled.div`
-  background: linear-gradient(to right, #0e3c89, #0e3c89) no-repeat;
-  background-position: center left;
-  background-size: 85% 4px;
-
-  border: solid #0e3c89;
-  border-width: 4px 0;
   position: absolute;
-  margin-top: 13px;
-  margin-left: 15px;
+  left: 20px;
+  top: 20px;
+  cursor: pointer;
+  padding: 10px 35px 16px 0px;
   z-index: 1200;
 
-  height: 15px;
-  width: 28px;
+  span {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 3px;
+    width: 25px;
+    background: ${props => props.theme.primary};
+    position: absolute;
+    display: block;
+    content: "";
+
+    background-color: ${props =>
+      props.open ? "transparent" : props.theme.primary};
+
+    &:after,
+    &:before {
+      transition: all 300ms ease-in-out;
+      ${props => props.open && "top: 0;"}
+
+      cursor: pointer;
+      border-radius: 1px;
+      height: 3px;
+      width: 25px;
+      background: ${props => props.theme.primary};
+      position: absolute;
+      display: block;
+      content: "";
+    }
+
+    &:before {
+      top: ${props => (props.open ? "0;" : "-10px;")};
+      width: 35px;
+      transform: ${props => (props.open ? "rotate(45deg);" : "rotate(0deg);")};
+    }
+    &:after {
+      bottom: -10px;
+      width: 35px;
+      transform: ${props => (props.open ? "rotate(-45deg);" : "rotate(0deg);")};
+    }
+  }
 `
 
-const MobileHeader = ({ isDark, setTheme }) => {
-  const [open, setOpen] = useState(false)
+const MobileHeader = ({ isDark, setTheme, open, setOpen }) => {
   const { i18n } = useTranslation()
 
   const updateOpenState = state => {
@@ -139,9 +174,11 @@ const MobileHeader = ({ isDark, setTheme }) => {
     i18n.changeLanguage(i18n.language === "es" ? "en" : "es")
   }
   return (
-    <MobileHeaderWrapper>
+    <MobileHeaderWrapper open={open}>
       <div className="hambuger-container">
-        <HamburgerButton onClick={() => setOpen(!open)} />
+        <HamburgerButton open={open} onClick={() => setOpen(!open)}>
+          <span />
+        </HamburgerButton>
       </div>
       <Menu
         isOpen={open}
@@ -151,17 +188,29 @@ const MobileHeader = ({ isDark, setTheme }) => {
       >
         <ul>
           <li>
-            <a className="menu-item" href="/">
+            <a
+              className="menu-item"
+              href="#about"
+              onClick={() => setOpen(!open)}
+            >
               About
             </a>
           </li>
           <li>
-            <a className="menu-item" href="/">
+            <a
+              className="menu-item"
+              href="#experience"
+              onClick={() => setOpen(!open)}
+            >
               Experience
             </a>
           </li>
           <li>
-            <a className="menu-item" href="/">
+            <a
+              className="menu-item"
+              href="#technology"
+              onClick={() => setOpen(!open)}
+            >
               Technologies
             </a>
           </li>

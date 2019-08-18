@@ -1,10 +1,11 @@
 import styled, { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-    body {
-      margin: 0;
-      background: ${props => props.theme.bg};
-    }
+  body {
+    margin: 0;
+    background: ${props => props.theme.bg};
+    overflow:  ${props => (props.isMobileMenuOpen ? "hidden" : "auto")};
+  }
 `
 
 export const lightTheme = {

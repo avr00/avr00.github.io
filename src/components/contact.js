@@ -58,6 +58,7 @@ const Contact = () => {
       <div className="container">
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://github.com/avr00"
           className="contact github"
         >
@@ -68,11 +69,16 @@ const Contact = () => {
         </a>
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="email:avrivadeneira1@gmail.com"
           className="contact email"
         >
           <EmailIcon />
-          <p target="_blank" href="email:avrivadeneira1@gmail.com">
+          <p
+            target="_blank"
+            rel="noopener noreferrer"
+            href="email:avrivadeneira1@gmail.com"
+          >
             <b>avrivadeneira1</b>@gmail.com
           </p>
         </a>

@@ -1,22 +1,25 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 // Hook
 function useLocalStorage(key, initialValue) {
-  // State to store our value
-  // Pass initial state function to useState so logic is only executed once
-  const [storedValue, setStoredValue] = useState(() => {
+  //set initial state after component mounts for when window.object is undefined
+  useEffect(() => {
     try {
       // Get from local storage by key
       const item =
         typeof window !== `undefined` ? window.localStorage.getItem(key) : null
       // Parse stored json or if none return initialValue
-      return item ? JSON.parse(item) : initialValue
+      setStoredValue(item ? JSON.parse(item) : initialValue)
     } catch (error) {
       // If error also return initialValue
       console.log(error)
-      return initialValue
+      setStoredValue(initialValue)
     }
-  })
+  }, [])
+
+  // State to store our value
+  // Pass initial state function to useState so logic is only executed once
+  const [storedValue, setStoredValue] = useState("")
 
   // Return a wrapped version of useState's setter function that ...
   // ... persists the new value to localStorage.
