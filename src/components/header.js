@@ -8,7 +8,11 @@ import langEs from "../images/spain.svg"
 import moonIcon from "../images/moon.svg"
 import sunIcon from "../images/sun.svg"
 
+import resume_en from "../files/resume_en.pdf"
+import resume_es from "../files/resume_es.pdf"
+
 const HeaderWrapper = styled.header`
+  padding: 10px 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -16,7 +20,7 @@ const HeaderWrapper = styled.header`
   /* box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.22); */
   ${props =>
     props.isScrolling &&
-    "box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.22);"}
+    `box-shadow: ${props.theme.headerShadow} 0px 2px 8px 0px;`}
   /* box-shadow: none; */
 
   background: ${props => props.theme.bg};
@@ -39,7 +43,7 @@ const HeaderWrapper = styled.header`
       font-family: Roboto;
       font-style: normal;
       font-weight: normal;
-      font-size: 18px;
+      font-size: 15px;
       line-height: 28px;
 
       color: ${props => props.theme.primary};
@@ -49,7 +53,13 @@ const HeaderWrapper = styled.header`
 
         a {
           color: inherit;
+          font-weight: bold;
           text-decoration: none;
+        }
+
+        &:hover {
+          transition: color 0.3s;
+          color: #0070f3;
         }
       }
     }
@@ -78,11 +88,13 @@ const Header = ({ siteTitle, setTheme, isDark }) => {
       setScrollYPosition(scrollPositionY)
     }
   }
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
 
   const changeLanguage = () => {
     i18n.changeLanguage(i18n.language === "es" ? "en" : "es")
   }
+
+  const resume = i18n.language === "es" ? resume_es : resume_en
   // eslint-disable-next-line
   const isScrolling = !!scrollYPosition
   return (
@@ -90,16 +102,19 @@ const Header = ({ siteTitle, setTheme, isDark }) => {
       <div className="container">
         <ul>
           <li>
-            <a href="#about">About</a>{" "}
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>{" "}
+            <a href="#experience">Experience</a>
           </li>
           <li>
-            {" "}
-            <a href="#technology">Technologies</a>{" "}
+            <a href="#technology">Technologies</a>
           </li>
-          <li>Resume</li>
+          <li>
+            <a href={resume} target="_blank">
+              {t("resume-txt")}
+            </a>
+          </li>
           <li onClick={() => setTheme(!isDark)}>
             <img src={isDark ? moonIcon : sunIcon} alt="language flag" />
           </li>

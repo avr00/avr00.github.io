@@ -36,11 +36,9 @@ const Home = () => {
     <HomeSection id="home">
       <div className="home-info">
         <H1>{t("Hey I’m Anibal, Software Developer.")}</H1>
-        <SubText>
-          I love building products that users will love to interact with.
-        </SubText>
+        <SubText>{t("I love build products")}</SubText>
         <Button href="#contact">
-          Get In Touch
+          {t("Get In Touch")}
           <img
             src={arrowRightIcon}
             style={{ marginLeft: 5 }}

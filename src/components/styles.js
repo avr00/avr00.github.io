@@ -12,12 +12,14 @@ export const lightTheme = {
   primary: "#000000",
   bg: "white",
   secondary: "#5E5A6B",
+  headerShadow: "rgba(0, 0, 0, 0.05)",
 }
 
 export const darkTheme = {
   primary: "#EEEEEE",
   bg: "#292929",
   secondary: "#EEEEEE",
+  headerShadow: "rgba(255, 255, 255, 0.05)",
 }
 
 export const H1 = styled.h1`
@@ -47,6 +49,13 @@ export const SubText = styled.p`
     font-size: 20px;
     line-height: 24px;
   }
+`
+
+export const SubTextTwo = styled.p`
+  font-family: Roboto;
+  font-size: 25px;
+  color: ${props => props.theme.primary};
+  margin-bottom: 100px;
 `
 
 export const AboutMeText = styled.p`
@@ -87,11 +96,12 @@ export const Button = styled.a`
 `
 
 export const ExperienceCard = styled.div`
+  padding: 25px;
   border-radius: 20px;
   height: 400px;
-  width: 100%;
   background: linear-gradient(135deg, #ff57b9 0%, #a704fd 100%);
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+  /* box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); */
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.12);
 
   display: flex;
   flex-direction: column;
@@ -101,11 +111,11 @@ export const ExperienceCard = styled.div`
   }
 
   .title {
-    margin: 15px 0px 0px 30px;
+    margin: 0px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 22px;
     line-height: 42px;
 
     color: #eeeeee;
@@ -116,12 +126,13 @@ export const ExperienceCard = styled.div`
     display: flex;
     justify-content: center;
     img {
-      height: 150px;
+      height: auto;
+      width: 100%;
     }
   }
 
   .description {
-    margin: 15px 30px;
+    margin: 15px 0px;
     height: 200px;
 
     font-family: Roboto;

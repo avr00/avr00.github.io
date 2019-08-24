@@ -2,12 +2,13 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { useTranslation } from "react-i18next"
 
 import { H1, AboutMeText } from "./styles"
 
 const AboutWrapper = styled.section`
   max-width: 1280px;
-  margin: 150px auto 300px auto;
+  margin: 0 auto 100px auto;
   padding-top: 150px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -34,6 +35,7 @@ const AboutWrapper = styled.section`
 
 const About = () => {
   const data = useStaticQuery(ABOUT_IMAGE)
+  const { t } = useTranslation()
 
   return (
     <AboutWrapper id="about">
@@ -43,13 +45,8 @@ const About = () => {
         </div>
       </div>
       <div className="about-me">
-        <H1>About Me</H1>
-        <AboutMeText>
-          Since I knew the power of software I knew this is what I wanted to do,
-          I have worked with several clients remotely and love creating digital
-          products that escale. In my spare time I love doing sports such as
-          calisthenics, being outdoor, and learning about tech!
-        </AboutMeText>
+        <H1>{t("about-me")}</H1>
+        <AboutMeText>{t("about-me-desc")}</AboutMeText>
       </div>
     </AboutWrapper>
   )

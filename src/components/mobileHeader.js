@@ -116,7 +116,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 const HamburgerButton = styled.div`
   position: absolute;
-  left: 20px;
+  right: 20px;
   top: 20px;
   cursor: pointer;
   padding: 10px 35px 16px 0px;
@@ -181,6 +181,7 @@ const MobileHeader = ({ isDark, setTheme, open, setOpen }) => {
         </HamburgerButton>
       </div>
       <Menu
+        right
         isOpen={open}
         onStateChange={updateOpenState}
         customBurgerIcon={false}

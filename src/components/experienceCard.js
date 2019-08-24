@@ -13,11 +13,15 @@ const ExperienceCard = ({ title, imgUrl, description, githubUrl, liveUrl }) => {
       <div className="links">
         {githubUrl && (
           <div className="github">
-            <a href={githubUrl}>Github</a>
+            <a target="_blank" href={githubUrl}>
+              Github
+            </a>
           </div>
         )}
         <div className="live">
-          <a href={liveUrl}>Live</a>
+          <a target="_blank" href={liveUrl}>
+            Live
+          </a>
         </div>
       </div>
     </Card>
