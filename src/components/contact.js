@@ -63,7 +63,11 @@ const Contact = () => {
           className="contact github"
         >
           <GithubIcon />
-          <p target="_blank" href="https://github.com/avr00">
+          <p
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/avr00"
+          >
             github.com<b>/avr00</b>
           </p>
         </a>

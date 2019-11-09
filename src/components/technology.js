@@ -22,15 +22,16 @@ const TechnologyWrapper = styled.section`
   }
 
   @media only screen and (max-width: 1200px) {
-    padding: 0 20px;
+    h1 {
+      margin: 20px 0;
+    }
+    padding: 60px 20px;
     .card-container {
       grid-template-columns: 300px 300px;
     }
   }
 
   @media only screen and (max-width: 740px) {
-    padding: 0 20px;
-
     .card-container {
       grid-template-columns: 100%;
     }

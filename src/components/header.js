@@ -2,6 +2,7 @@ import PropTypes from "prop-types"
 import React, { useEffect, useState } from "react"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 import langEn from "../images/united-states.svg"
 import langEs from "../images/spain.svg"
@@ -102,16 +103,19 @@ const Header = ({ siteTitle, setTheme, isDark }) => {
       <div className="container">
         <ul>
           <li>
-            <a href="#about">About</a>
+            <a onClick={() => scrollTo("#home")}>Home</a>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <a onClick={() => scrollTo("#about")}>About</a>
           </li>
           <li>
-            <a href="#technology">Technologies</a>
+            <a onClick={() => scrollTo("#experience")}>Experience</a>
           </li>
           <li>
-            <a href={resume} target="_blank">
+            <a onClick={() => scrollTo("#technology")}>Technologies</a>
+          </li>
+          <li>
+            <a href={resume} target="_blank" rel="noopener noreferrer">
               {t("resume-txt")}
             </a>
           </li>

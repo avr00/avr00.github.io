@@ -19,6 +19,7 @@ import MobileHeader from "./mobileHeader"
 import useMedia from "../hooks/useMedia"
 
 const Wrapper = styled.div`
+  scroll-behavior: smooth;
   background: ${props => props.theme.bg};
   margin: 0 auto;
 

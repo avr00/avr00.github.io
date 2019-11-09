@@ -7,12 +7,13 @@ import { H1 } from "./styles"
 
 import headnews from "../images/project-images/headnews.png"
 import huddle from "../images/project-images/huddle.png"
-import notesapp from "../images/project-images/notesapp.png"
 import password_generator from "../images/project-images/password_generator.png"
-import plane_app from "../images/project-images/plane_app.png"
 import slicknotes from "../images/project-images/slicknotes.png"
 import theinside from "../images/project-images/theinside.png"
 import word_inspector from "../images/project-images/word-inspector.png"
+
+// import notesapp from "../images/project-images/notesapp.png"
+// import plane_app from "../images/project-images/plane_app.png"
 
 const ExprienceWrapper = styled.section`
   max-width: 1280px;
@@ -33,14 +34,16 @@ const ExprienceWrapper = styled.section`
   }
 
   @media only screen and (max-width: 1200px) {
+    h1 {
+      margin: 20px 0;
+    }
     .card-container {
       grid-template-columns: 300px 300px;
     }
   }
 
   @media only screen and (max-width: 800px) {
-    padding: 0 20px;
-    margin: 60px auto 60px auto;
+    padding-top: 60px auto;
 
     .card-container {
       padding: 0 20px;

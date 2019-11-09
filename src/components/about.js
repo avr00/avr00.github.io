@@ -30,6 +30,10 @@ const AboutWrapper = styled.section`
     .image-container {
       display: none;
     }
+
+    .about-me {
+      margin-top: 60px;
+    }
   }
 `
 

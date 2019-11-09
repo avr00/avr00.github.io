@@ -1,7 +1,10 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { slide as Menu } from "react-burger-menu"
 import styled from "styled-components"
 import { useTranslation } from "react-i18next"
+
+import resume_en from "../files/resume_en.pdf"
+import resume_es from "../files/resume_es.pdf"
 
 import { Button } from "./styles"
 import arrowRightIcon from "../images/arrow-right.svg"
@@ -14,7 +17,15 @@ import sunIcon from "../images/sun.svg"
 const MobileHeaderWrapper = styled.div`
   /* Position and sizing of burger button */
   height: 50px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 10;
   background: ${props => props.theme.bg};
+  ${props =>
+    props.isScrolling &&
+    `box-shadow: ${props.theme.headerShadow} 0px 2px 8px 0px;`}
+
   /* position: fixed;
   top: 0;
   width: 100%;
@@ -166,15 +177,40 @@ const HamburgerButton = styled.div`
 const MobileHeader = ({ isDark, setTheme, open, setOpen }) => {
   const { i18n } = useTranslation()
 
+  const [scrollYPosition, setScrollYPosition] = useState(0)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll, 16)
+    }
+
+    return function cleanup() {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll, 16)
+      }
+    }
+  }, [])
+
   const updateOpenState = state => {
     setOpen(state.isOpen)
   }
 
+  const handleScroll = () => {
+    // + is unary operator, same as Number(window.scrollY)
+    if (typeof window !== "undefined") {
+      const scrollPositionY = +window.scrollY
+      setScrollYPosition(scrollPositionY)
+    }
+  }
+
+  const resume = i18n.language === "es" ? resume_es : resume_en
   const changeLanguage = () => {
     i18n.changeLanguage(i18n.language === "es" ? "en" : "es")
   }
+
+  const isScrolling = !!scrollYPosition
   return (
-    <MobileHeaderWrapper open={open}>
+    <MobileHeaderWrapper open={open} isScrolling={isScrolling}>
       <div className="hambuger-container">
         <HamburgerButton open={open} onClick={() => setOpen(!open)}>
           <span />
@@ -188,6 +224,15 @@ const MobileHeader = ({ isDark, setTheme, open, setOpen }) => {
         width={"100%"}
       >
         <ul>
+          <li>
+            <a
+              className="menu-item"
+              href="#home"
+              onClick={() => setOpen(!open)}
+            >
+              Home
+            </a>
+          </li>
           <li>
             <a
               className="menu-item"
@@ -216,12 +261,21 @@ const MobileHeader = ({ isDark, setTheme, open, setOpen }) => {
             </a>
           </li>
           <li>
-            <a className="menu-item" href="/">
+            <a
+              href={resume}
+              className="menu-item"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Resume
             </a>
           </li>
           <li>
-            <Button className="btn" href="#contact">
+            <Button
+              className="btn"
+              href="#contact"
+              onClick={() => setOpen(!open)}
+            >
               Get In Touch
               <img
                 src={arrowRightIcon}
