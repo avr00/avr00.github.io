@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: "/portfolio",
+  pathPrefix: "/avr00.github.io",
   siteMetadata: {
     title: `AVR Portfolio`,
     description: `Just a nice and simple portfolio :).`,
